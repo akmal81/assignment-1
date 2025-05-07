@@ -46,35 +46,55 @@ const result2 = concatenateArrays([1, 2], [3, 4], [5]);
 // --------------------4
 
 class Vehicle {
-    private make:string;
-    private year:number;
-    constructor(make:string, year:number){
+    private make: string;
+    private year: number;
+    constructor(make: string, year: number) {
         this.make = make;
         this.year = year;
     };
-    getInfo():string{
-       return `Make: ${this.make}, year: ${this.year}`
+    getInfo(): string {
+        return `Make: ${this.make}, year: ${this.year}`
     }
 }
 
 class Car extends Vehicle {
-    private model:string;
-    constructor(make:string, year:number, model:string) {
+    private model: string;
+    constructor(make: string, year: number, model: string) {
         super(make, year)
-       this.model = model;
+        this.model = model;
     }
-    getModel():string{
+    getModel(): string {
         return `Model: ${this.model}`
     }
 }
 
 
-const myCar = new Car("Toyota", 2020, "Corolla");
+// const myCar = new Car("Toyota", 2020, "Corolla");
 
-console.log(myCar.getInfo())
-console.log(myCar.getModel())
+// console.log(myCar.getInfo())
+// console.log(myCar.getModel())
 
 
 // --------------------------5
 
+
+function processValue(value: string | number): number {
+
+    if (typeof value === 'string') {
+        return value.length;
+    }
+   else if (typeof value === 'number') {
+        return value * 2
+    }
+    else{
+        return 0;
+    }
+}
+
+const result3 = processValue('hellow');
+const result4 = processValue(2);
+console.log(result4);
+console.log(result3);
+
+// ----------------------------------6
 
