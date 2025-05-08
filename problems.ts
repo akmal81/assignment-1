@@ -160,14 +160,14 @@ const result7 = getDayType(Day.Saturday);
 
 // -------------8
 
-async function squareAsync(n: number): Promise<number>{
-    return new Promise((reslove, reject)=>{
+async function squareAsync(n: number): Promise<number> {
+    return new Promise((reslove, reject) => {
         setInterval(() => {
-            if (n<0) {
+            if (n < 0) {
                 reject("Negative number not allowed");
             }
-            else{
-               reslove(n*n)
+            else {
+                reslove(n * n)
             }
         }, 1000);
     })
