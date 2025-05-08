@@ -20,10 +20,7 @@ function filterByRating(items: { title: string; rating: number }[]): { title: st
     return items.filter(singleItem => singleItem.rating >= 4)
 }
 
-// const ratedBooks = filterByRating(books);
-// console.log(ratedBooks)
 
-// --------------3
 function concatenateArrays<T>(...arrays: T[][]): T[] {
 
     const result = [];
@@ -35,14 +32,7 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
     }
     return result
 }
-// const result1 = concatenateArrays(["a", "b"], ["c"]);
 
-// const result2 = concatenateArrays([1, 2], [3, 4], [5]);
-
-// console.log(result1);
-// console.log(result2);
-
-// --------------------4
 
 class Vehicle {
     private make: string;
@@ -72,13 +62,7 @@ class Car extends Vehicle {
 
 const myCar = new Car("Toyota", 2020, "Corolla");
 
-// console.log(myCar.getInfo())
-// myCar.getInfo()
-// console.log(myCar.getModel())
-// myCar.getModel()
 
-
-// --------------------------5
 
 
 function processValue(value: string | number): number {
@@ -94,12 +78,7 @@ function processValue(value: string | number): number {
     }
 }
 
-// const result3 = processValue('hello');
-// const result4 = processValue(2);
-// console.log(result4);
-// console.log(result3);
 
-// ----------------------------------6
 interface Product {
     name: string;
     price: number;
@@ -121,17 +100,7 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
     return topExpensive;
 
 }
-// 
-// const products = [
-//     { name: "Pen", price: 10 },
-//     { name: "Notebook", price: 25 },
-//     { name: "Bag", price: 50 }
-// ];
 
-// const result = getMostExpensiveProduct(products);
-//  console.log(result)
-
-// -----------------------7
 
 enum Day {
     Monday,
@@ -155,19 +124,13 @@ function getDayType(day: Day): string {
     }
 }
 
-// const result5 = getDayType(Day.Sunday);
-// const result6 = getDayType(Day.Monday);
-// const result7 = getDayType(Day.Saturday);
-// console.log(result7)
 
-
-// -------------8
 
 async function squareAsync(n: number): Promise<number> {
     return new Promise((reslove, reject) => {
         setInterval(() => {
             if (n < 0) {
-                reject("Negative number not allowed");
+                reject(`Error: Negative number not allowed`);
             }
             else {
                 reslove(n * n)
@@ -175,7 +138,3 @@ async function squareAsync(n: number): Promise<number> {
         }, 1000);
     })
 }
-
-// squareAsync(4).then(console.log);
-
-// squareAsync(-3).catch(console.error); 
