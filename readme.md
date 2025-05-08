@@ -61,6 +61,7 @@ interfaces are best for object  types are best for more complex type.
 
 
 -----------------------------------------------------------------
+-----------------------------------------------------------------
 
 
 ## What is the use of enums in TypeScript? Provide an example of a numeric and string enum.
