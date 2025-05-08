@@ -6,6 +6,15 @@
 Enums is a type script features. it is not javascript extension.  
 enums allow to define set of named constants or unchangeable variables. 
 
+## Use of enums
+
+ ######✅Ues when working wilth a fixed set of related value like user role, week, etc. 
+ ######✅Make code more readable, maintainable type-safe 
+ ######✅Improves Readability 
+ ######✅Better debugging with string
+ ######✅Cleaner function arguments
+
+
 ## Declaration of enums
 
 ```ts
