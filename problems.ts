@@ -83,18 +83,96 @@ function processValue(value: string | number): number {
     if (typeof value === 'string') {
         return value.length;
     }
-   else if (typeof value === 'number') {
+    else if (typeof value === 'number') {
         return value * 2
     }
-    else{
+    else {
         return 0;
     }
 }
 
 const result3 = processValue('hellow');
 const result4 = processValue(2);
-console.log(result4);
-console.log(result3);
+// console.log(result4);
+// console.log(result3);
 
 // ----------------------------------6
+interface Product {
+    name: string;
+    price: number;
+}
 
+function getMostExpensiveProduct(products: Product[]): Product | null {
+
+    if (products.length === 0) {
+        return null;
+    }
+
+    let topExpensive = products[0];
+
+    for (let product of products) {
+        if (product.price > topExpensive.price) {
+            topExpensive = product
+        };
+    }
+    return topExpensive;
+
+}
+// 
+const products = [
+    { name: "Pen", price: 10 },
+    { name: "Notebook", price: 25 },
+    { name: "Bag", price: 50 }
+];
+
+const result = getMostExpensiveProduct(products);
+//  console.log(result)
+
+// -----------------------7
+
+enum Day {
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday
+}
+function getDayType(day: Day): string {
+
+    if (day === Day.Sunday) {
+        return "WeekEnd"
+    }
+    else if (day === Day.Saturday) {
+        return "WeekEnd"
+    }
+    else {
+        return "WeekDay"
+    }
+}
+
+const result5 = getDayType(Day.Sunday);
+const result6 = getDayType(Day.Monday);
+const result7 = getDayType(Day.Saturday);
+// console.log(result7)
+
+
+// -------------8
+
+async function squareAsync(n: number): Promise<number>{
+    return new Promise((reslove, reject)=>{
+        setInterval(() => {
+            if (n<0) {
+                reject("Negative number not allowed");
+            }
+            else{
+               reslove(n*n)
+            }
+        }, 1000);
+    })
+}
+
+squareAsync(4).then(console.log);
+
+// squareAsync(-3).catch(console.error); 
