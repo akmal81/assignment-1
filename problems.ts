@@ -9,7 +9,6 @@ function formatString(input: string, toUpper?: boolean): string {
 };
 
 
-
 const books = [
     { title: "Book A", rating: 4.5 },
     { title: "Book B", rating: 3.2 },
@@ -19,6 +18,7 @@ const books = [
 function filterByRating(items: { title: string; rating: number }[]): { title: string; rating: number }[] {
     return items.filter(singleItem => singleItem.rating >= 4)
 }
+
 
 
 function concatenateArrays<T>(...arrays: T[][]): T[] {
@@ -34,6 +34,8 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
 }
 
 
+// --------------------4
+
 class Vehicle {
     private make: string;
     private year: number;
@@ -43,7 +45,7 @@ class Vehicle {
     };
     getInfo(): string {
         return `Make: ${this.make}, year: ${this.year}`
-       
+
     }
 }
 
@@ -55,12 +57,14 @@ class Car extends Vehicle {
     }
     getModel(): string {
         return `Model: ${this.model}`
-        
+
     }
 }
 
 
-const myCar = new Car("Toyota", 2020, "Corolla");
+
+
+
 
 
 
@@ -77,6 +81,8 @@ function processValue(value: string | number): number {
         return 0;
     }
 }
+
+
 
 
 interface Product {
@@ -126,6 +132,9 @@ function getDayType(day: Day): string {
 
 
 
+
+
+
 async function squareAsync(n: number): Promise<number> {
     return new Promise((reslove, reject) => {
         setInterval(() => {
@@ -138,3 +147,4 @@ async function squareAsync(n: number): Promise<number> {
         }, 1000);
     })
 }
+
