@@ -8,11 +8,11 @@ enums allow to define set of named constants or unchangeable variables.
 
 ## Use of enums
 
- ######✅Ues when working wilth a fixed set of related value like user role, week, etc. 
- ######✅Make code more readable, maintainable type-safe 
- ######✅Improves Readability 
- ######✅Better debugging with string
- ######✅Cleaner function arguments
+###### ✅Ues when working wilth a fixed set of related value like user role, week, etc. 
+###### ✅Make code more readable, maintainable type-safe 
+###### ✅Improves Readability 
+###### ✅Better debugging with string
+###### ✅Cleaner function arguments
 
 
 ## Declaration of enums
@@ -24,7 +24,6 @@ enum EnumsName {
     value3
 }
 ```
-
 > Use capitalize name for best practice.
 
 There are two types of enums: **string** and **numeric**
