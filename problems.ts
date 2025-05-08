@@ -1,16 +1,15 @@
 function formatString(input: string, toUpper?: boolean): string {
-    if (toUpper) {
-        return input.toUpperCase()
-    } else {
+    if (toUpper === false) {
         return input.toLowerCase();
+    }
+    else {
+        return input.toUpperCase()
     }
 
 };
 
-const myName = formatString("akmal");
 
-// console.log(myName);
-// -------------------2
+
 const books = [
     { title: "Book A", rating: 4.5 },
     { title: "Book B", rating: 3.2 },
@@ -21,7 +20,7 @@ function filterByRating(items: { title: string; rating: number }[]): { title: st
     return items.filter(singleItem => singleItem.rating >= 4)
 }
 
-const ratedBooks = filterByRating(books);
+// const ratedBooks = filterByRating(books);
 // console.log(ratedBooks)
 
 // --------------3
@@ -36,9 +35,9 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
     }
     return result
 }
-const result1 = concatenateArrays(["a", "b"], ["c"]);
+// const result1 = concatenateArrays(["a", "b"], ["c"]);
 
-const result2 = concatenateArrays([1, 2], [3, 4], [5]);
+// const result2 = concatenateArrays([1, 2], [3, 4], [5]);
 
 // console.log(result1);
 // console.log(result2);
@@ -54,6 +53,7 @@ class Vehicle {
     };
     getInfo(): string {
         return `Make: ${this.make}, year: ${this.year}`
+       
     }
 }
 
@@ -65,14 +65,17 @@ class Car extends Vehicle {
     }
     getModel(): string {
         return `Model: ${this.model}`
+        
     }
 }
 
 
-// const myCar = new Car("Toyota", 2020, "Corolla");
+const myCar = new Car("Toyota", 2020, "Corolla");
 
 // console.log(myCar.getInfo())
+// myCar.getInfo()
 // console.log(myCar.getModel())
+// myCar.getModel()
 
 
 // --------------------------5
@@ -91,8 +94,8 @@ function processValue(value: string | number): number {
     }
 }
 
-const result3 = processValue('hellow');
-const result4 = processValue(2);
+// const result3 = processValue('hello');
+// const result4 = processValue(2);
 // console.log(result4);
 // console.log(result3);
 
@@ -119,13 +122,13 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
 
 }
 // 
-const products = [
-    { name: "Pen", price: 10 },
-    { name: "Notebook", price: 25 },
-    { name: "Bag", price: 50 }
-];
+// const products = [
+//     { name: "Pen", price: 10 },
+//     { name: "Notebook", price: 25 },
+//     { name: "Bag", price: 50 }
+// ];
 
-const result = getMostExpensiveProduct(products);
+// const result = getMostExpensiveProduct(products);
 //  console.log(result)
 
 // -----------------------7
@@ -152,9 +155,9 @@ function getDayType(day: Day): string {
     }
 }
 
-const result5 = getDayType(Day.Sunday);
-const result6 = getDayType(Day.Monday);
-const result7 = getDayType(Day.Saturday);
+// const result5 = getDayType(Day.Sunday);
+// const result6 = getDayType(Day.Monday);
+// const result7 = getDayType(Day.Saturday);
 // console.log(result7)
 
 
@@ -173,6 +176,6 @@ async function squareAsync(n: number): Promise<number> {
     })
 }
 
-squareAsync(4).then(console.log);
+// squareAsync(4).then(console.log);
 
 // squareAsync(-3).catch(console.error); 
